@@ -1,0 +1,43 @@
+# =========================
+# Node / Backend
+# =========================
+/backend/node_modules
+/backend/.env
+/backend/dist
+/backend/build
+/backend/.DS_Store
+/backend/npm-debug.log*
+/backend/yarn-error.log*
+/backend/.next
+/backend/.cache
+
+# =========================
+# React / Frontend
+# =========================
+/frontend/node_modules
+/frontend/.env
+/frontend/build
+/frontend/.DS_Store
+/frontend/npm-debug.log*
+/frontend/yarn-error.log*
+/frontend/.next
+/frontend/.cache
+
+# =========================
+# OS Files
+# =========================
+*.log
+*.tmp
+*.swp
+*.swo
+Thumbs.db
+.DS_Store
+.idea/
+.vscode/
+*.iml
+
+# =========================
+# Optional
+# =========================
+/.env.local
+/.env.*.local
