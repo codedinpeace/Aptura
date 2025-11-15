@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
-    googleId:String,
     name:{
         type:String,
         required:true,
@@ -22,14 +21,14 @@ const userSchema = new mongoose.Schema({
         type:String,
         minLength:8,
     },
-    picture:{
-        type:String
-    },
     code:{
         type:String,
     },
     isVerified:{
         type:Boolean
+    },
+    updateCode:{
+        type:String,
     }
 },{timestamps:true})
 
