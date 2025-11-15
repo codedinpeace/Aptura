@@ -1,8 +1,9 @@
 const express = require('express')
 const router = express.Router() 
-const {register, login, logout, edit, sendCode, check} = require('../controllers/auth.controller')
+const {register, login, logout, edit, sendCode, check, verify} = require('../controllers/auth.controller')
 const {protectRoute} = require('../middleware/protectroute.middleware')
 
+router.post("/verify", verify)
 router.post("/register", register)
 router.post ("/login", login)
 router.post("/logout", logout)

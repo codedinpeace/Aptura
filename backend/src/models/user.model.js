@@ -24,6 +24,12 @@ const userSchema = new mongoose.Schema({
     },
     picture:{
         type:String
+    },
+    code:{
+        type:String,
+    },
+    isVerified:{
+        type:Boolean
     }
 },{timestamps:true})
 
