@@ -5,7 +5,7 @@ const {sendEmail, SendEditCode} = require('../utils/SendEmail')
 
 const register = async (req,res)=>{ 
     const {name,username,email,password} = req.body
-    const code = Math.floor(100000 + Math.random() * 900000);
+    const code = Math.floor(100000 + Math.random() * 900000).toString();
 
     try {
         const alreadyExisting = await userModel.findOne({email})
@@ -33,7 +33,8 @@ const verify = async (req,res)=>{
     
     try {
         const user = await userModel.findOne({email})
-        if(Number(enteredCode) !== Number(user.code)) return res.status(400).json({message:"The code you entered is wrong"})
+        if(!user) return res.status(400).json({message:"User doesn't exist"})
+        if(String(enteredCode) !== String(user.code)) return res.status(400).json({message:"The code you entered is wrong"})
             await userModel.findOneAndUpdate({email}, {isVerified:true}, {new:true})
         generateToken(user._id, res)
         res.status(200).json({message:"User created Successfully"})
@@ -83,7 +84,7 @@ const edit = async (req,res)=>{
     try {
         const hashedPassword = await bcrypt.hash(password,10)
          const user = await userModel.findOne({_id:id})
-         if(Number(code) !== Number(user.updateCode)) return res.status(409).json({message:"Invalid Code"})
+         if(String(code) !== String(user.updateCode)) return res.status(409).json({message:"Invalid Code"})
             const updatedUser = await userModel.findOneAndUpdate({_id:id}, {name:name, username:username, email:email, password:hashedPassword}, {new:true})
         res.status(200).json({message:"Profile updated successfully", updatedUser})
 } catch (error) {
@@ -92,7 +93,15 @@ const edit = async (req,res)=>{
     }
 }
 const check = async (req,res)=>{
-
+    try {
+        const id = req.user._id
+        const user = await userModel.findById(id)
+        if(!user) return res.status(404).json({message:"User not found"})
+            res.status(200).json({message:"Authenticated successfully", user})
+    } catch (error) {
+        res.status(400).json({message:"Something went wrong"})
+        console.log(error)
+    }
 }
 
 module.exports = {register, login, logout, edit, sendCode, check, verify}

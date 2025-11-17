@@ -7,8 +7,8 @@ router.post("/verify", verify)
 router.post("/register", register)
 router.post ("/login", login)
 router.post("/logout", logout)
-router.post("/edit/:id", edit)
-router.post("/send-code", sendCode)
+router.post("/edit/:id", protectRoute, edit)
+router.post("/send-code", protectRoute, sendCode)
 router.get("/check", protectRoute, check)
 
 module.exports = router
