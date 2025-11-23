@@ -55,5 +55,5 @@ const getResume = async (req,res) =>{
     }
 }
 
-module.exports = {saveResume}
+module.exports = {saveResume, deleteResume, getResume}
 
