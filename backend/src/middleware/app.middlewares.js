@@ -17,4 +17,4 @@ const middlewares = async (app) =>{
     app.use("/api", ResumeRoutes)
 }
 
-module.exports = {middlewares}
+module.exports = {middlewares}  
