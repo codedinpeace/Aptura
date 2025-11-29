@@ -2,7 +2,7 @@ import React from 'react'
 
 const WhyAptura = () => {
   return (
-    <div>WhyAptura</div>
+    <div className='w-full h-screen '></div>
   )
 }
 

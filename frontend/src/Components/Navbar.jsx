@@ -32,13 +32,13 @@ const Navbar = () => {
   
 
   return (
-    <div>
+    <div className=''>
 
-    <div className='max-lg:hidden flex justify-around items-center mt-8'>
+    <div className='max-lg:hidden bg-transparent flex justify-around items-center pt-8 '>
       <div>
         <Link to="/"><img className='Logo max-lg:w-20 w-22' src={Logo} alt="" /></Link>
       </div>
-      <div className='Navlinks text-[16px] flex gap-10 max-xl:gap-5 pl-20'>
+      <div className='Navlinks  text-[16px] flex gap-10 max-xl:gap-5 pl-4 0'>
         <a href="/">Home</a>
         <a href="#benefits">Benefits</a>
         <a href="#usage">Usage</a> 
@@ -53,7 +53,7 @@ const Navbar = () => {
     {/* Mobile Layout */}
 
     <div className='lg:hidden'> 
-    <div className='flex justify-between px-10 mt-5'>
+    <div className='flex justify-between px-10 pt-5'>
       <Link to='/'><img src={Logo} className='w-20' alt="" /></Link>
       <Menu className='cursor-pointer' onClick={()=>{setVisible(true)}} />
     </div>

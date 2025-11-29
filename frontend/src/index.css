@@ -4,5 +4,17 @@ body{
   background: #0B0B0B;
   color: white;
   font-family: "Poppins";
-  overflow: hidden;
+  overflow-x: hidden;
+  
+}
+
+
+
+.homepage{
+  background: linear-gradient(to bottom right, #000000, hsl(0, 0%, 9%),  #020202 );
+}
+
+.your-career-starts-here{
+  border:2px solid rgb(32, 32, 32);
+  border-image:linear-gradient(90deg, #0E0D0D, #535353, #0E0D0D) 1;
 }

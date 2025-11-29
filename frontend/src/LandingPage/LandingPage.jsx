@@ -11,13 +11,8 @@ import Footer from '../Components/Footer'
 const LandingPage = () => {
   return (
     <div>
-        <Navbar />
-        {/* <HomePage />
-        <WhyAptura />
-        <HowItWorks />
-        <Testimonials />
-        <CTA />
-        <Footer /> */}
+        <HomePage/>
+        {/* <WhyAptura /> */}
     </div>
   )
 }
