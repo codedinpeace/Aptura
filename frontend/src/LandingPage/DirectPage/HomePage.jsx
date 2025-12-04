@@ -4,9 +4,52 @@ import Netflix from '../../assets/Netflix.svg'
 import Zoom from '../../assets/Zoom.svg'
 import DropBox from '../../assets/DropBox.svg'
 import DoorDash from '../../assets/DoorDash.svg'
-
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 const HomePage = () => {
+
+  useGSAP(()=>{
+    gsap.from(".your-career-starts-here",{
+      opacity:0,
+      y:-50,
+      duration:0.5,
+
+    })
+    gsap.from(".headline",{
+      delay:0.2,
+      y:-50,
+      opacity:0,
+      duration:0.5,
+    })
+    gsap.from(".subheadline",{
+      y:-50,
+      delay:0.4,
+      opacity:0,
+      duration:0.5,
+    })
+    gsap.from(".buttons",{
+      y:-50,
+      delay:0.6,
+      opacity:0,
+      duration:0.5,
+    })  
+    gsap.from(".line",{
+      width:0,
+      delay:0.4,
+      opacity:0,
+      duration:0.5,
+    })  
+
+    gsap.from(".companies-logo img",{
+      stagger:0.3,
+      duration:0.8,
+      y:-30,
+      opacity:0,
+      delay:0.6
+    })
+  })
+
   return (
     <>
     <div>
@@ -31,7 +74,7 @@ const HomePage = () => {
       </div>
     <div className="companies flex justify-center flex-col items-center mt-30">
       <div className='line w-[40%] h-[2px]'></div>
-      <div className="companies-logo flex gap-20 mt-5  max-lg:gap-10 flex-wrap max-md:gap-5 max-md:px-20 justify-center ">
+      <div className="companies-logo overflow-hidden flex gap-20 mt-5  max-lg:gap-10 flex-wrap max-md:gap-5 max-md:px-20 justify-center ">
         <img src={Netflix} alt=""  className='max-lg:w-20' />
         <img src={Zoom} alt="" className='max-lg:w-20' />
         <img src={DoorDash} alt="" className='max-lg:w-40'  />
