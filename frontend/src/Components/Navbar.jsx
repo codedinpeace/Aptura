@@ -38,7 +38,7 @@ const Navbar = () => {
       <div>
         <Link to="/"><img className='Logo max-lg:w-20 w-22' src={Logo} alt="" /></Link>
       </div>
-      <div className='Navlinks  text-[16px] flex gap-10 max-xl:gap-5 pl-4 0'>
+      <div className='Navlinks  text-[16px] flex gap-10 max-xl:gap-5 pl-40'>
         <a href="/">Home</a>
         <a href="#benefits">Benefits</a>
         <a href="#usage">Usage</a> 

@@ -1,5 +1,10 @@
 import React from 'react'
 import Navbar from '../../Components/Navbar'
+import Netflix from '../../assets/Netflix.svg'
+import Zoom from '../../assets/Zoom.svg'
+import DropBox from '../../assets/DropBox.svg'
+import DoorDash from '../../assets/DoorDash.svg'
+
 
 const HomePage = () => {
   return (
@@ -24,6 +29,15 @@ const HomePage = () => {
         <button className='border-1  hover:bg-gradient-to-bl from-[#6b3ef4b5] via-[#8d67fe42] to-[#6b3ef4a1] hover:border-none border-[#B39AFE] transition-bg duration-300 max-lg:px-7 px-9 py-2 rounded-xl cursor-pointer max-sm:px-5'>Make an account</button>
         </div>
       </div>
+    <div className="companies flex justify-center flex-col items-center mt-30">
+      <div className='line w-[40%] h-[2px]'></div>
+      <div className="companies-logo flex gap-20 mt-5  max-lg:gap-10 flex-wrap max-md:gap-5 max-md:px-20 justify-center ">
+        <img src={Netflix} alt=""  className='max-lg:w-20' />
+        <img src={Zoom} alt="" className='max-lg:w-20' />
+        <img src={DoorDash} alt="" className='max-lg:w-40'  />
+        <img src={DropBox} alt=""  className='max-lg:w-30' />
+      </div>
+    </div>
 
     </div>
     </div>
