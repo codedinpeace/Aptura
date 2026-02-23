@@ -54,7 +54,7 @@ const HomePage = () => {
     <>
     <div>
     <div className='homepage   w-full h-screen'>
-      <Navbar />
+      <Navbar />  
       <div className='flex flex-col justify-center items-center mt-30 gap-10 max-md:gap-6'>
         <div className='flex justify-center  '>
         <div className="your-career-starts-here rounded-full px-10 py-2 ">

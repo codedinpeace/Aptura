@@ -27,3 +27,19 @@ body{
 .line{
   background: linear-gradient(90deg, #1a1a1a, #666, #1a1a1a);
 }
+.line2{
+  background: linear-gradient(90deg, #1a1a1a, #666, #1a1a1a);
+}
+
+.transition-box{
+  background: radial-gradient( #1c1b1b3a, #0d0d0d7a, #00000000);
+  /* filter: blur(10px); */
+}
+
+.blurstrip{
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0) 60%
+  );
+}

@@ -12,7 +12,7 @@ const LandingPage = () => {
   return (
     <div>
         <HomePage/>
-        {/* <WhyAptura /> */}
+        <WhyAptura />
     </div>
   )
 }
