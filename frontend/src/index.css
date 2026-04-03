@@ -43,3 +43,17 @@ body{
     rgba(255, 255, 255, 0) 60%
   );
 }
+
+.smartTemplates{
+  background: linear-gradient(135deg, #401B7E, #8957DB, #401B7E);
+  border:2px solid rgb(32, 32, 32);
+  border-image:linear-gradient(90deg, #0E0D0D, #535353, #0E0D0D)
+}
+
+.overlay{
+  background: linear-gradient(135deg, #413f3f96, #1515159a ,#413f3f79);
+}
+
+.instantExport{
+  background: linear-gradient(135deg, #191919, #333333, #191919);
+}

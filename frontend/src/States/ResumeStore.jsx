@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ResumeStore = () => {
-  return (
-    <div>ResumeStore</div>
-  )
-}
+  return <div className="">ResumeStore</div>;
+};
 
-export default ResumeStore
+export default ResumeStore;
